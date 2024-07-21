@@ -150,7 +150,7 @@ module.exports = grammar({
     arg_instruction: ($) =>
       seq(
         alias(/[aA][rR][gG]/, "ARG"),
-        field("name", alias(/[a-zA-Z0-9_]+/, $.unquoted_string)),
+        field("name", alias(/[a-zA-Z0-9_ ]+/, $.unquoted_string)),
         optional(
           seq(
             token.immediate("="),
